@@ -69,34 +69,33 @@ Run a client
 python3 client.py
 ```
 A small GUI window will ask for your username.
+![Login GUI](chat_multiuser_screenshots/chat_multiuser_encrypted_login.png)
 
 After submitting, the main chat window opens.
+![Chat GUI](chat_multiuser_screenshots/chat_multiuser_encrypted_init_chat.png)
 
 Use Send or Enter to send messages.
+![Multiusers chatting GUI](chat_multiuser_screenshots/chat_multiuser_encrypted_multichat.png)
 
 Use Live Users to see all connected clients.
+![Multiusers chat feature](chat_multiuser_screenshots/chat_multiuser_encrypted_multichat(1).png)
 
 Use Quit to exit cleanly.
+![Ending the chat](chat_multiuser_screenshots/chat_multiuser_encrypted_multichat(2).png)
 
 Technical Details
-Uses NDJSON (newline-delimited JSON) for message transport.
-
-Each client runs a dedicated receiving thread.
-
-Server manages clients with thread-safe operations.
-
-Handles malformed messages gracefully.
-
-User input sanitization ensures robustness, preventing crashes from weird names or unexpected input.
+- Uses NDJSON (newline-delimited JSON) for message transport.
+- Each client runs a dedicated receiving thread.
+- Server manages clients with thread-safe operations.
+- Handles malformed messages gracefully.
+- User input sanitization ensures robustness, preventing crashes from weird names or unexpected input.
 
 Personal Reflection
 This project was more than just coding — it was an existential experience.
 At 4 AM, debugging why colors didn’t match my obsessive vision of the username display, I found myself in a spiral of:
 
-JSON parsing tricks for the simplest formatting issues.
-
-Thread-safe client management to prevent server meltdowns.
-
-Multiple chiropractic sessions from being glued to the chair for hours.
+- JSON parsing tricks for the simplest formatting issues.
+- Thread-safe client management to prevent server meltdowns.
+- Multiple chiropractic sessions from being glued to the chair for hours.
 
 All for a chat app where, ultimately, the colors of the usernames finally looked right no matter what the user typed. A true labor of love, insanity, and a testament to the small joys of programming perfectionism.
